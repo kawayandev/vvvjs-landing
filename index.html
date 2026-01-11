@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VVVJS - Coming Soon</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;400;500;600&family=Marcellus&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#d5f2f1',
+                            500: '#005253',
+                            600: '#003a3a',
+                            700: '#002a2a',
+                        },
+                        gold: {
+                            50: '#fdf8ed',
+                            500: '#c67c00',
+                        }
+                    },
+                    fontFamily: {
+                        marcellus: ['Marcellus', 'serif'],
+                        nunito: ['Nunito', 'sans-serif'],
+                        albert: ['"Albert Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gradient-to-br from-gold-50 to-brand-50 min-h-screen flex items-center justify-center p-6 text-gray-800 font-nunito">
+
+    <div class="max-w-xl w-full text-center">
+        <!-- Logo Area -->
+        <div class="Logo mb-8 flex flex-col items-center space-y-2">
+            <img class="w-32 rounded-full lg:w-48" src="brand.png" alt="Logo"/>
+            <div class="text-gold-500/80 font-albert text-lg tracking-widest">VVVJS</div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="bg-white/60 backdrop-blur-md rounded-2xl shadow-xl p-8 md:p-12 border border-white/50">
+            <h1 class="font-marcellus text-4xl md:text-5xl text-brand-600 mb-6 leading-tight">
+                Something Beautiful <br> Is Coming
+            </h1>
+            
+            <p class="text-lg text-gray-600 leading-relaxed max-w-md mx-auto">
+                We are crafting an exclusive experience just for you.
+            </p>
+        </div>
+
+        <!-- Footer -->
+        <div class="mt-8 text-gold-500/80 text-sm font-albert tracking-wider">
+            &copy; <span id="year"></span> vvvjewelryshop. All rights reserved.
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
